@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Metode Pengelolaan & Pemanfaatan Sampah - Ngabersih Umbulharjo
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#21C45D",
+              "primary-foreground": "#FAFAFA",
+              secondary: "#F0F4F0",
+              "secondary-foreground": "#1A4B28",
+              muted: "#F0F4F0",
+              "muted-foreground": "#6E757C",
+              accent: "#B8E6CC",
+              "accent-foreground": "#1A4B28",
+              border: "#E2E9E4",
+              background: "#FFFFFF",
+              foreground: "#222629",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-gradient-to-br from-green-50 via-white to-blue-50 min-h-screen"
+  >
+    <!-- Header -->
+    <header class="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2 sm:space-x-3">
+            <!-- Logo Images -->
+            <div class="flex items-center space-x-2 sm:space-x-3">
+              <img
+                src="./images/logo-sorosutan.jpeg"
+                alt="Official Logo"
+                class="h-12 w-12 sm:h-16 sm:w-16 object-contain"
+              />
+              <img
+                src="./images/logo-ugm.jpeg"
+                alt="University Logo"
+                class="h-12 w-12 sm:h-15 sm:w-15 object-contain"
+              />
+              <img
+                src="./images/logo-ngabersih-umbulharjo.png"
+                alt="KKN PPM UGM Umbulharjo Logo"
+                class="h-12 w-12 sm:h-15 sm:w-15 object-contain"
+              />
+            </div>
+            <h1
+              class="text-lg sm:text-xl lg:text-2xl font-bold text-foreground"
+            >
+              Ngabersih Umbulharjo
+            </h1>
+          </div>
+
+          <!-- Mobile menu button -->
+          <input type="checkbox" id="mobile-menu-toggle" class="hidden peer" />
+          <label
+            for="mobile-menu-toggle"
+            class="lg:hidden cursor-pointer p-2"
+            aria-label="Toggle mobile menu"
+          >
+            <svg
+              class="w-6 h-6 text-foreground"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </label>
+
+          <!-- Desktop navigation - adjusted breakpoint from md to lg -->
+          <nav class="hidden lg:flex" aria-label="Main navigation">
+            <ul class="flex space-x-4 xl:space-x-6">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-sm lg:text-base text-muted-foreground hover:text-primary transition-colors whitespace-nowrap"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="waste-types.html"
+                  class="text-sm lg:text-base text-muted-foreground hover:text-primary transition-colors whitespace-nowrap"
+                  >Jenis Sampah</a
+                >
+              </li>
+              <li>
+                <a
+                  href="waste-management.html"
+                  class="text-sm lg:text-base text-primary font-medium whitespace-nowrap"
+                  >Pengelolaan</a
+                >
+              </li>
+              <li>
+                <a
+                  href="waste-impacts.html"
+                  class="text-sm lg:text-base text-muted-foreground hover:text-primary transition-colors whitespace-nowrap"
+                  >Dampak</a
+                >
+              </li>
+              <li>
+                <a
+                  href="waste-banks.html"
+                  class="text-sm lg:text-base text-muted-foreground hover:text-primary transition-colors whitespace-nowrap"
+                  >Bank Sampah</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Mobile navigation - adjusted breakpoint from md to lg -->
+        <nav
+          class="lg:hidden peer-checked:block hidden mt-4 pb-4 border-t border-border pt-4"
+          aria-label="Mobile navigation"
+        >
+          <ul class="flex flex-col space-y-3">
+            <li>
+              <a
+                href="index.html"
+                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
+                >Beranda</a
+              >
+            </li>
+            <li>
+              <a
+                href="waste-types.html"
+                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
+                >Jenis Sampah</a
+              >
+            </li>
+            <li>
+              <a
+                href="waste-management.html"
+                class="block py-2 text-primary font-medium"
+                >Pengelolaan</a
+              >
+            </li>
+            <li>
+              <a
+                href="waste-impacts.html"
+                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
+                >Dampak</a
+              >
+            </li>
+            <li>
+              <a
+                href="waste-banks.html"
+                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
+                >Bank Sampah</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="py-4 px-4 bg-muted">
+      <div class="container mx-auto">
+        <nav
+          class="flex items-center space-x-2 text-sm"
+          aria-label="Breadcrumb"
+        >
+          <a href="index.html" class="text-muted-foreground hover:text-primary"
+            >Beranda</a
+          >
+          <span class="text-muted-foreground">/</span>
+          <span class="text-foreground"
+            >Metode Pengelolaan & Pemanfaatan Sampah</span
+          >
+        </nav>
+      </div>
+    </div>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="py-16 px-4">
+        <div class="container mx-auto">
+          <div class="text-center mb-12">
+            <a
+              href="index.html"
+              class="inline-flex items-center border border-border bg-background px-3 py-1 text-sm font-medium rounded-md mb-4 hover:bg-accent transition-colors"
+            >
+              <svg
+                class="h-4 w-4 mr-2"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="m12 19-7-7 7-7" />
+                <path d="M19 12H5" />
+              </svg>
+              Kembali ke Beranda
+            </a>
+            <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Metode Pengelolaan & Pemanfaatan Sampah
+            </h2>
+            <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Pelajari prinsip 7R dan panduan praktis untuk mengelola serta
+              memanfaatkan kembali sampah dalam kehidupan sehari-hari.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7R Principles -->
+      <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+          <h3 class="text-3xl font-bold text-center text-foreground mb-4">
+            Prinsip 7R Pengelolaan Sampah
+          </h3>
+          <p class="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Tujuh prinsip pengelolaan sampah yang disusun berdasarkan prioritas
+            dari yang paling efektif hingga yang terakhir.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <article
+              class="bg-red-50 border-2 border-red-200 rounded-lg p-6 text-center"
+            >
+              <div
+                class="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-lg font-bold"
+              >
+                1
+              </div>
+              <h4 class="text-lg font-semibold mb-2 text-red-700">
+                Refuse (Tolak)
+              </h4>
+              <p class="text-sm text-muted-foreground leading-relaxed">
+                Tolak atau hindari penggunaan barang yang menghasilkan sampah
+                berlebihan, seperti kemasan sekali pakai.
+              </p>
+            </article>
+
+            <article
+              class="bg-orange-50 border-2 border-orange-200 rounded-lg p-6 text-center"
+            >
+              <div
+                class="w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-lg font-bold"
+              >
+                2
+              </div>
+              <h4 class="text-lg font-semibold mb-2 text-orange-700">
+                Reduce (Kurangi)
+              </h4>
+              <p class="text-sm text-muted-foreground leading-relaxed">
+                Kurangi konsumsi dan penggunaan barang yang tidak perlu untuk
+                meminimalkan sampah yang dihasilkan.
+              </p>
+            </article>
+
+            <article
+              class="bg-yellow-50 border-2 border-yellow-200 rounded-lg p-6 text-center"
+            >
+              <div
+                class="w-12 h-12 bg-yellow-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-lg font-bold"
+              >
+                3
+              </div>
+              <h4 class="text-lg font-semibold mb-2 text-yellow-700">
+                Reuse (Gunakan Kembali)
+              </h4>
+              <p class="text-sm text-muted-foreground leading-relaxed">
+                Gunakan kembali barang yang masih layak pakai untuk fungsi yang
+                sama atau berbeda.
+              </p>
+            </article>
+
+            <article
+              class="bg-green-50 border-2 border-green-200 rounded-lg p-6 text-center"
+            >
+              <div
+                class="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-lg font-bold"
+              >
+                4
+              </div>
+              <h4 class="text-lg font-semibold mb-2 text-green-700">
+                Repair (Perbaiki)
+              </h4>
+              <p class="text-sm text-muted-foreground leading-relaxed">
+                Perbaiki barang yang rusak agar dapat digunakan kembali daripada
+                membuangnya.
+              </p>
+            </article>
+
+            <article
+              class="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 text-center"
+            >
+              <div
+                class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-lg font-bold"
+              >
+                5
+              </div>
+              <h4 class="text-lg font-semibold mb-2 text-blue-700">
+                Recycle (Daur Ulang)
+              </h4>
+              <p class="text-sm text-muted-foreground leading-relaxed">
+                Olah sampah menjadi produk baru yang memiliki nilai guna dan
+                ekonomis.
+              </p>
+            </article>
+
+            <article
+              class="bg-purple-50 border-2 border-purple-200 rounded-lg p-6 text-center"
+            >
+              <div
+                class="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-lg font-bold"
+              >
+                6
+              </div>
+              <h4 class="text-lg font-semibold mb-2 text-purple-700">
+                Rot (Kompos)
+              </h4>
+              <p class="text-sm text-muted-foreground leading-relaxed">
+                Buat kompos dari sampah organik untuk menghasilkan pupuk alami
+                yang berguna.
+              </p>
+            </article>
+
+            <article
+              class="bg-gray-50 border-2 border-gray-200 rounded-lg p-6 text-center"
+            >
+              <div
+                class="w-12 h-12 bg-gray-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-lg font-bold"
+              >
+                7
+              </div>
+              <h4 class="text-lg font-semibold mb-2 text-gray-700">
+                Recover (Pulihkan)
+              </h4>
+              <p class="text-sm text-muted-foreground leading-relaxed">
+                Manfaatkan energi dari sampah yang tidak dapat didaur ulang
+                melalui teknologi.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Practical Guides -->
+      <section class="py-16 px-4">
+        <div class="container mx-auto">
+          <h3 class="text-3xl font-bold text-center text-foreground mb-12">
+            Panduan Praktis Pemanfaatan Sampah
+          </h3>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Liquid Fertilizer Guide -->
+            <article class="bg-white border border-border rounded-lg p-6">
+              <header class="mb-6">
+                <div class="flex items-center space-x-3 mb-2">
+                  <svg
+                    class="h-8 w-8 text-primary"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M12 2v20" />
+                    <path d="m15 5-3-3-3 3" />
+                    <path d="m9 9 3 3 3-3" />
+                  </svg>
+                  <h4 class="text-xl font-semibold">
+                    Pupuk Cair Organik dari Sampah Dapur
+                  </h4>
+                </div>
+                <p class="text-sm text-muted-foreground">
+                  Buat pupuk cair organik dari sisa sayuran dan buah untuk
+                  menyuburkan tanaman.
+                </p>
+              </header>
+              <div class="space-y-4">
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">
+                    Bahan yang Diperlukan:
+                  </h5>
+                  <ul class="text-sm space-y-1">
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Sisa sayuran dan kulit buah (2 kg)</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Gula merah atau molase (200g)</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Air bersih (5 liter)</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Wadah plastik dengan tutup</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Langkah Pembuatan:</h5>
+                  <ol class="text-sm space-y-2">
+                    <li class="flex items-start space-x-2">
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full mt-0.5"
+                        >1</span
+                      >
+                      <span
+                        >Potong kecil-kecil sampah organik dan masukkan ke
+                        wadah</span
+                      >
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full mt-0.5"
+                        >2</span
+                      >
+                      <span
+                        >Larutkan gula merah dengan air, lalu tuang ke
+                        wadah</span
+                      >
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full mt-0.5"
+                        >3</span
+                      >
+                      <span>Tutup rapat dan diamkan selama 2 minggu</span>
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full mt-0.5"
+                        >4</span
+                      >
+                      <span
+                        >Aduk setiap 3 hari dan buka tutup untuk sirkulasi
+                        udara</span
+                      >
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full mt-0.5"
+                        >5</span
+                      >
+                      <span
+                        >Saring cairan dan encerkan 1:10 sebelum digunakan</span
+                      >
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </article>
+
+            <!-- Coconut Coir Briquettes Guide -->
+            <article class="bg-white border border-border rounded-lg p-6">
+              <header class="mb-6">
+                <div class="flex items-center space-x-3 mb-2">
+                  <svg
+                    class="h-8 w-8 text-primary"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"
+                    />
+                  </svg>
+                  <h4 class="text-xl font-semibold">
+                    Briket Sabut Kelapa untuk Bahan Bakar
+                  </h4>
+                </div>
+                <p class="text-sm text-muted-foreground">
+                  Manfaatkan sabut kelapa menjadi briket ramah lingkungan
+                  sebagai alternatif bahan bakar.
+                </p>
+              </header>
+              <div class="space-y-4">
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">
+                    Bahan yang Diperlukan:
+                  </h5>
+                  <ul class="text-sm space-y-1">
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Sabut kelapa kering (3 kg)</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Tepung kanji (300g)</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Air secukupnya</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Cetakan briket atau pipa PVC</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Langkah Pembuatan:</h5>
+                  <ol class="text-sm space-y-2">
+                    <li class="flex items-start space-x-2">
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full mt-0.5"
+                        >1</span
+                      >
+                      <span
+                        >Giling sabut kelapa hingga halus dengan blender atau
+                        mesin</span
+                      >
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full mt-0.5"
+                        >2</span
+                      >
+                      <span
+                        >Campurkan tepung kanji dengan air hingga
+                        mengental</span
+                      >
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full mt-0.5"
+                        >3</span
+                      >
+                      <span
+                        >Aduk sabut kelapa dengan lem kanji hingga rata</span
+                      >
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full mt-0.5"
+                        >4</span
+                      >
+                      <span
+                        >Cetak adonan dalam cetakan dan tekan hingga padat</span
+                      >
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full mt-0.5"
+                        >5</span
+                      >
+                      <span
+                        >Jemur di bawah sinar matahari 3-5 hari hingga
+                        kering</span
+                      >
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </article>
+
+            <!-- Plastic Bottle Planters Guide -->
+            <article class="bg-white border border-border rounded-lg p-6">
+              <header class="mb-6">
+                <div class="flex items-center space-x-3 mb-2">
+                  <svg
+                    class="h-8 w-8 text-primary"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"
+                    />
+                    <path
+                      d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"
+                    />
+                    <path d="m14 16-3 3 3 3" />
+                  </svg>
+                  <h4 class="text-xl font-semibold">
+                    Pot Tanaman dari Botol Plastik
+                  </h4>
+                </div>
+                <p class="text-sm text-muted-foreground">
+                  Ubah botol plastik bekas menjadi pot tanaman yang unik dan
+                  fungsional untuk taman vertikal.
+                </p>
+              </header>
+              <div class="space-y-4">
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">
+                    Bahan yang Diperlukan:
+                  </h5>
+                  <ul class="text-sm space-y-1">
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Botol plastik bekas (berbagai ukuran)</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Cutter atau gunting</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Paku atau solder untuk membuat lubang</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Cat atau spidol untuk dekorasi</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Tali atau kawat untuk gantungan</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Langkah Pembuatan:</h5>
+                  <ol class="text-sm space-y-2">
+                    <li class="flex items-start space-x-2">
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full mt-0.5"
+                        >1</span
+                      >
+                      <span>Cuci bersih botol plastik dan lepaskan label</span>
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full mt-0.5"
+                        >2</span
+                      >
+                      <span
+                        >Potong botol secara horizontal di bagian tengah atau
+                        atas</span
+                      >
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full mt-0.5"
+                        >3</span
+                      >
+                      <span
+                        >Buat lubang drainase di bagian bawah dengan paku</span
+                      >
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full mt-0.5"
+                        >4</span
+                      >
+                      <span
+                        >Dekorasi botol dengan cat atau hiasan sesuai
+                        kreativitas</span
+                      >
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span
+                        class="inline-flex items-center justify-center w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full mt-0.5"
+                        >5</span
+                      >
+                      <span
+                        >Pasang tali gantungan dan isi dengan tanah serta
+                        tanaman</span
+                      >
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </article>
+
+            <!-- Other Upcycling Ideas -->
+            <article class="bg-white border border-border rounded-lg p-6">
+              <header class="mb-6">
+                <div class="flex items-center space-x-3 mb-2">
+                  <svg
+                    class="h-8 w-8 text-primary"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9.663 17h4.673M12 3v1m6.364 1.636-.707.707M21 12h-1M4 12H3m3.343-5.657-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                    />
+                  </svg>
+                  <h4 class="text-xl font-semibold">
+                    Ide Kreatif Upcycling Lainnya
+                  </h4>
+                </div>
+                <p class="text-sm text-muted-foreground">
+                  Berbagai ide kreatif untuk mengubah sampah menjadi barang
+                  berguna dalam kehidupan sehari-hari.
+                </p>
+              </header>
+              <div class="space-y-4">
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Kemasan Bekas:</h5>
+                  <ul class="text-sm space-y-1">
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Kaleng bekas → Tempat pensil atau vas bunga</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Kardus → Rak buku mini atau tempat mainan</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Botol kaca → Lampu hias atau tempat lilin</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Tekstil Bekas:</h5>
+                  <ul class="text-sm space-y-1">
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Kaos lama → Tas belanja atau kain pel</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Jeans bekas → Tas denim atau apron dapur</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Kain perca → Taplak meja atau sarung bantal</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">
+                    Tips Sukses Upcycling:
+                  </h5>
+                  <ul class="text-sm space-y-1">
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Bersihkan barang bekas sebelum digunakan</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Gunakan alat yang tepat dan aman</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span
+                        >Libatkan keluarga untuk ide yang lebih kreatif</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="py-16 px-4 bg-primary text-primary-foreground">
+        <div class="container mx-auto text-center">
+          <h3 class="text-3xl font-bold mb-4">
+            Siap Menerapkan Pengelolaan Sampah yang Berkelanjutan?
+          </h3>
+          <p class="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Pelajari dampak negatif dari sampah yang tidak dikelola dengan baik
+            dan pentingnya menjaga lingkungan yang bersih.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="waste-impacts.html"
+              class="inline-flex items-center justify-center bg-secondary text-secondary-foreground px-6 py-3 font-medium rounded-md hover:bg-secondary/90 transition-colors"
+            >
+              Dampak Sampah
+            </a>
+            <a
+              href="waste-types.html"
+              class="inline-flex items-center justify-center bg-transparent border border-primary-foreground text-primary-foreground px-6 py-3 font-medium rounded-md hover:bg-primary-foreground hover:text-primary transition-colors"
+            >
+              Jenis & Pemilahan
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-muted py-12 px-4">
+      <div class="container mx-auto text-center">
+        <div class="flex items-center justify-center space-x-2 mb-4">
+          <svg
+            class="h-6 w-6 text-primary"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"
+            />
+            <path
+              d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"
+            />
+            <path d="m14 16-3 3 3 3" />
+          </svg>
+          <span class="text-lg font-semibold">Ngabersih Umbulharjo</span>
+        </div>
+        <p class="text-muted-foreground">
+          Bersama membangun kesadaran pengelolaan sampah untuk Umbulharjo yang
+          lebih bersih dan berkelanjutan.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

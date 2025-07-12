@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jenis & Cara Memilah Sampah - Ngabersih Umbulharjo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#21C45D",
+              "primary-foreground": "#FAFAFA",
+              secondary: "#F0F4F0",
+              "secondary-foreground": "#1A4B28",
+              muted: "#F0F4F0",
+              "muted-foreground": "#6E757C",
+              accent: "#B8E6CC",
+              "accent-foreground": "#1A4B28",
+              border: "#E2E9E4",
+              background: "#FFFFFF",
+              foreground: "#222629",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-gradient-to-br from-green-50 via-white to-blue-50 min-h-screen"
+  >
+    <!-- Header -->
+    <header class="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2 sm:space-x-3">
+            <!-- Logo Images -->
+            <div class="flex items-center space-x-2 sm:space-x-3">
+              <img
+                src="./images/logo-sorosutan.jpeg"
+                alt="Official Logo"
+                class="h-12 w-12 sm:h-16 sm:w-16 object-contain"
+              />
+              <img
+                src="./images/logo-ugm.jpeg"
+                alt="University Logo"
+                class="h-12 w-12 sm:h-15 sm:w-15 object-contain"
+              />
+              <img
+                src="./images/logo-ngabersih-umbulharjo.png"
+                alt="KKN PPM UGM Umbulharjo Logo"
+                class="h-12 w-12 sm:h-15 sm:w-15 object-contain"
+              />
+            </div>
+            <h1
+              class="text-lg sm:text-xl lg:text-2xl font-bold text-foreground"
+            >
+              Ngabersih Umbulharjo
+            </h1>
+          </div>
+          <!-- Mobile menu button -->
+          <input type="checkbox" id="mobile-menu-toggle" class="hidden peer" />
+          <label
+            for="mobile-menu-toggle"
+            class="lg:hidden cursor-pointer p-2"
+            aria-label="Toggle mobile menu"
+          >
+            <svg
+              class="w-6 h-6 text-foreground"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </label>
+
+          <!-- Desktop navigation -->
+          <nav class="hidden lg:flex" aria-label="Main navigation">
+            <ul class="flex space-x-4 xl:space-x-6">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-sm lg:text-base text-muted-foreground hover:text-primary transition-colors whitespace-nowrap"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="waste-types.html"
+                  class="text-sm lg:text-base text-primary font-medium whitespace-nowrap"
+                  >Jenis Sampah</a
+                >
+              </li>
+              <li>
+                <a
+                  href="waste-management.html"
+                  class="text-sm lg:text-base text-muted-foreground hover:text-primary transition-colors whitespace-nowrap"
+                  >Pengelolaan</a
+                >
+              </li>
+              <li>
+                <a
+                  href="waste-impacts.html"
+                  class="text-sm lg:text-base text-muted-foreground hover:text-primary transition-colors whitespace-nowrap"
+                  >Dampak</a
+                >
+              </li>
+              <li>
+                <a
+                  href="waste-banks.html"
+                  class="text-sm lg:text-base text-muted-foreground hover:text-primary transition-colors whitespace-nowrap"
+                  >Bank Sampah</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Mobile navigation -->
+        <nav
+          class="lg:hidden peer-checked:block hidden mt-4 pb-4 border-t border-border pt-4"
+          aria-label="Mobile navigation"
+        >
+          <ul class="flex flex-col space-y-3">
+            <li>
+              <a
+                href="index.html"
+                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
+                >Beranda</a
+              >
+            </li>
+            <li>
+              <a
+                href="waste-types.html"
+                class="block py-2 text-primary font-medium"
+                >Jenis Sampah</a
+              >
+            </li>
+            <li>
+              <a
+                href="waste-management.html"
+                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
+                >Pengelolaan</a
+              >
+            </li>
+            <li>
+              <a
+                href="waste-impacts.html"
+                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
+                >Dampak</a
+              >
+            </li>
+            <li>
+              <a
+                href="waste-banks.html"
+                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
+                >Bank Sampah</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="py-4 px-4 bg-muted">
+      <div class="container mx-auto">
+        <nav
+          class="flex items-center space-x-2 text-sm"
+          aria-label="Breadcrumb"
+        >
+          <a href="index.html" class="text-muted-foreground hover:text-primary"
+            >Beranda</a
+          >
+          <span class="text-muted-foreground">/</span>
+          <span class="text-foreground">Jenis & Cara Memilah Sampah</span>
+        </nav>
+      </div>
+    </div>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="py-16 px-4">
+        <div class="container mx-auto">
+          <div class="text-center mb-12">
+            <a
+              href="index.html"
+              class="inline-flex items-center border border-border bg-background px-3 py-1 text-sm font-medium rounded-md mb-4 hover:bg-accent transition-colors"
+            >
+              <svg
+                class="h-4 w-4 mr-2"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="m12 19-7-7 7-7" />
+                <path d="M19 12H5" />
+              </svg>
+              Kembali ke Beranda
+            </a>
+            <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Jenis & Cara Memilah Sampah
+            </h2>
+            <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Mengenal berbagai jenis sampah dan cara memilahnya dengan benar
+              adalah langkah pertama dalam pengelolaan sampah yang efektif.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Waste Categories -->
+      <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+          <h3 class="text-3xl font-bold text-center text-foreground mb-12">
+            Kategori Sampah Berdasarkan Jenisnya
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <article
+              class="bg-green-50 border-2 border-green-200 rounded-lg p-6"
+            >
+              <header class="mb-6">
+                <div class="flex items-center space-x-3 mb-2">
+                  <svg
+                    class="h-8 w-8 text-green-600"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M12 2v20" />
+                    <path d="m15 5-3-3-3 3" />
+                    <path d="m9 9 3 3 3-3" />
+                  </svg>
+                  <div>
+                    <h4 class="text-xl font-semibold">Sampah Organik</h4>
+                    <span
+                      class="inline-flex items-center px-2 py-1 text-xs font-medium bg-white border border-green-300 rounded-md"
+                    >
+                      Tempat Sampah Hijau
+                    </span>
+                  </div>
+                </div>
+                <p class="text-sm text-muted-foreground">
+                  Sampah yang berasal dari makhluk hidup dan dapat terurai
+                  secara alami
+                </p>
+              </header>
+              <div class="space-y-6">
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Contoh:</h5>
+                  <ul class="text-sm space-y-1">
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Sisa makanan dan kulit buah</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Daun-daunan kering</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Potongan sayuran</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Tulang dan duri ikan</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Ampas kopi dan teh</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Tips Pemilahan:</h5>
+                  <ul class="text-sm space-y-1">
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Pisahkan dari sampah lainnya</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Bisa dibuat kompos di rumah</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Jangan dicampur dengan plastik</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Buang dalam keadaan kering jika memungkinkan</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="bg-blue-50 border-2 border-blue-200 rounded-lg p-6">
+              <header class="mb-6">
+                <div class="flex items-center space-x-3 mb-2">
+                  <svg
+                    class="h-8 w-8 text-blue-600"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"
+                    />
+                    <path
+                      d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"
+                    />
+                    <path d="m14 16-3 3 3 3" />
+                  </svg>
+                  <div>
+                    <h4 class="text-xl font-semibold">Sampah Anorganik</h4>
+                    <span
+                      class="inline-flex items-center px-2 py-1 text-xs font-medium bg-white border border-blue-300 rounded-md"
+                    >
+                      Tempat Sampah Biru
+                    </span>
+                  </div>
+                </div>
+                <p class="text-sm text-muted-foreground">
+                  Sampah yang tidak dapat terurai secara alami dan memerlukan
+                  proses daur ulang
+                </p>
+              </header>
+              <div class="space-y-6">
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Contoh:</h5>
+                  <ul class="text-sm space-y-1">
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Botol plastik dan kaleng</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Kertas dan karton</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Kaca dan logam</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Kemasan makanan</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Tas plastik</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Tips Pemilahan:</h5>
+                  <ul class="text-sm space-y-1">
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Bersihkan sebelum membuang</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Pisahkan berdasarkan jenisnya</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Lipat atau pres untuk menghemat ruang</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Kumpulkan untuk dijual ke pengepul</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="bg-red-50 border-2 border-red-200 rounded-lg p-6">
+              <header class="mb-6">
+                <div class="flex items-center space-x-3 mb-2">
+                  <svg
+                    class="h-8 w-8 text-red-600"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polygon points="13,2 3,14 12,14 11,22 21,10 12,10" />
+                  </svg>
+                  <div>
+                    <h4 class="text-xl font-semibold">Sampah B3 (Berbahaya)</h4>
+                    <span
+                      class="inline-flex items-center px-2 py-1 text-xs font-medium bg-white border border-red-300 rounded-md"
+                    >
+                      Tempat Sampah Merah
+                    </span>
+                  </div>
+                </div>
+                <p class="text-sm text-muted-foreground">
+                  Sampah yang mengandung bahan berbahaya dan beracun
+                </p>
+              </header>
+              <div class="space-y-6">
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Contoh:</h5>
+                  <ul class="text-sm space-y-1">
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Baterai bekas</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Lampu neon dan bohlam</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Obat-obatan kadaluwarsa</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Cat dan pelarut</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Pestisida dan insektisida</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Tips Pemilahan:</h5>
+                  <ul class="text-sm space-y-1">
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Jangan buang sembarangan</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Kumpulkan di tempat khusus</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Hubungi dinas kebersihan</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Simpan terpisah dari sampah lain</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="bg-cyan-50 border-2 border-cyan-200 rounded-lg p-6">
+              <header class="mb-6">
+                <div class="flex items-center space-x-3 mb-2">
+                  <svg
+                    class="h-8 w-8 text-cyan-600"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                  <div>
+                    <h4 class="text-xl font-semibold">Sampah Cair</h4>
+                    <span
+                      class="inline-flex items-center px-2 py-1 text-xs font-medium bg-white border border-cyan-300 rounded-md"
+                    >
+                      Tempat Sampah Biru Muda
+                    </span>
+                  </div>
+                </div>
+                <p class="text-sm text-muted-foreground">
+                  Limbah dalam bentuk cair yang memerlukan pengolahan khusus
+                </p>
+              </header>
+              <div class="space-y-6">
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Contoh:</h5>
+                  <ul class="text-sm space-y-1">
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Air cucian dan sabun</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Minyak goreng bekas</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Air hujan kotor</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Limbah industri cair</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-foreground rounded-full"></div>
+                      <span>Air toilet dan septik</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Tips Pemilahan:</h5>
+                  <ul class="text-sm space-y-1">
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Jangan buang ke saluran air</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Filter sebelum dibuang</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Gunakan produk ramah lingkungan</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-primary rounded-full"></div>
+                      <span>Olah melalui instalasi pengolahan</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sorting Steps -->
+      <section class="py-16 px-4">
+        <div class="container mx-auto">
+          <h3 class="text-3xl font-bold text-center text-foreground mb-12">
+            Langkah-langkah Memilah Sampah
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <article
+              class="bg-white border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
+            >
+              <div
+                class="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold"
+              >
+                1
+              </div>
+              <h4 class="text-lg font-semibold mb-2">Siapkan Tempat Sampah</h4>
+              <p class="text-sm text-muted-foreground leading-relaxed">
+                Sediakan minimal 3 tempat sampah dengan warna berbeda: hijau
+                untuk organik, biru untuk anorganik, dan merah untuk B3.
+              </p>
+            </article>
+
+            <article
+              class="bg-white border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
+            >
+              <div
+                class="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold"
+              >
+                2
+              </div>
+              <h4 class="text-lg font-semibold mb-2">Bersihkan Sampah</h4>
+              <p class="text-sm text-muted-foreground leading-relaxed">
+                Cuci bersih kemasan makanan dan minuman sebelum dibuang ke
+                tempat sampah anorganik.
+              </p>
+            </article>
+
+            <article
+              class="bg-white border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
+            >
+              <div
+                class="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold"
+              >
+                3
+              </div>
+              <h4 class="text-lg font-semibold mb-2">
+                Pilah Berdasarkan Jenis
+              </h4>
+              <p class="text-sm text-muted-foreground leading-relaxed">
+                Identifikasi jenis sampah dan masukkan ke tempat sampah sesuai
+                kategorinya.
+              </p>
+            </article>
+
+            <article
+              class="bg-white border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
+            >
+              <div
+                class="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold"
+              >
+                4
+              </div>
+              <h4 class="text-lg font-semibold mb-2">Kumpulkan dan Salurkan</h4>
+              <p class="text-sm text-muted-foreground leading-relaxed">
+                Kumpulkan sampah yang bisa didaur ulang dan salurkan ke bank
+                sampah atau pengepul.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="py-16 px-4 bg-primary text-primary-foreground">
+        <div class="container mx-auto text-center">
+          <h3 class="text-3xl font-bold mb-4">
+            Siap Menerapkan Pemilahan Sampah?
+          </h3>
+          <p class="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Pelajari metode pengelolaan sampah yang efektif dan cara
+            memanfaatkan kembali sampah untuk kehidupan sehari-hari.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="waste-management.html"
+              class="inline-flex items-center justify-center bg-secondary text-secondary-foreground px-6 py-3 font-medium rounded-md hover:bg-secondary/90 transition-colors"
+            >
+              Metode Pengelolaan
+            </a>
+            <a
+              href="waste-impacts.html"
+              class="inline-flex items-center justify-center bg-transparent border border-primary-foreground text-primary-foreground px-6 py-3 font-medium rounded-md hover:bg-primary-foreground hover:text-primary transition-colors"
+            >
+              Dampak Sampah
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-muted py-12 px-4">
+      <div class="container mx-auto text-center">
+        <div class="flex items-center justify-center space-x-2 mb-4">
+          <svg
+            class="h-6 w-6 text-primary"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"
+            />
+            <path
+              d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"
+            />
+            <path d="m14 16-3 3 3 3" />
+          </svg>
+          <span class="text-lg font-semibold">Ngabersih Umbulharjo</span>
+        </div>
+        <p class="text-muted-foreground">
+          Bersama membangun kesadaran pengelolaan sampah untuk Umbulharjo yang
+          lebih bersih dan berkelanjutan.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

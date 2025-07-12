@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lokasi Bank Sampah Sorosutan - Ngabersih Umbulharjo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#21C45D",
+              "primary-foreground": "#FAFAFA",
+              secondary: "#F0F4F0",
+              "secondary-foreground": "#1A4B28",
+              muted: "#F0F4F0",
+              "muted-foreground": "#6E757C",
+              accent: "#B8E6CC",
+              "accent-foreground": "#1A4B28",
+              border: "#E2E9E4",
+              background: "#FFFFFF",
+              foreground: "#222629",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-gradient-to-br from-green-50 via-white to-blue-50 min-h-screen"
+  >
+    <!-- Header -->
+    <header class="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2 sm:space-x-3">
+            <!-- Logo Images -->
+            <div class="flex items-center space-x-2 sm:space-x-3">
+              <img
+                src="./images/logo-sorosutan.jpeg"
+                alt="Official Logo"
+                class="h-12 w-12 sm:h-16 sm:w-16 object-contain"
+              />
+              <img
+                src="./images/logo-ugm.jpeg"
+                alt="University Logo"
+                class="h-12 w-12 sm:h-15 sm:w-15 object-contain"
+              />
+              <img
+                src="./images/logo-ngabersih-umbulharjo.png"
+                alt="KKN PPM UGM Umbulharjo Logo"
+                class="h-12 w-12 sm:h-15 sm:w-15 object-contain"
+              />
+            </div>
+            <h1
+              class="text-lg sm:text-xl lg:text-2xl font-bold text-foreground"
+            >
+              Ngabersih Umbulharjo
+            </h1>
+          </div>
+
+          <!-- Mobile menu button -->
+          <input type="checkbox" id="mobile-menu-toggle" class="hidden peer" />
+          <label
+            for="mobile-menu-toggle"
+            class="md:hidden cursor-pointer p-2"
+            aria-label="Toggle mobile menu"
+          >
+            <svg
+              class="w-6 h-6 text-foreground"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </label>
+
+          <!-- Desktop navigation -->
+          <nav class="hidden md:flex space-x-6" aria-label="Main navigation">
+            <ul class="flex space-x-6">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-muted-foreground hover:text-primary transition-colors"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="waste-types.html"
+                  class="text-muted-foreground hover:text-primary transition-colors"
+                  >Jenis Sampah</a
+                >
+              </li>
+              <li>
+                <a
+                  href="waste-management.html"
+                  class="text-muted-foreground hover:text-primary transition-colors"
+                  >Pengelolaan</a
+                >
+              </li>
+              <li>
+                <a
+                  href="waste-impacts.html"
+                  class="text-muted-foreground hover:text-primary transition-colors"
+                  >Dampak</a
+                >
+              </li>
+              <li>
+                <a href="waste-banks.html" class="text-primary font-medium"
+                  >Bank Sampah</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Mobile navigation -->
+        <nav
+          class="md:hidden peer-checked:block hidden mt-4 pb-4 border-t border-border pt-4"
+          aria-label="Mobile navigation"
+        >
+          <ul class="flex flex-col space-y-3">
+            <li>
+              <a
+                href="index.html"
+                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
+                >Beranda</a
+              >
+            </li>
+            <li>
+              <a
+                href="waste-types.html"
+                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
+                >Jenis Sampah</a
+              >
+            </li>
+            <li>
+              <a
+                href="waste-management.html"
+                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
+                >Pengelolaan</a
+              >
+            </li>
+            <li>
+              <a
+                href="waste-impacts.html"
+                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
+                >Dampak</a
+              >
+            </li>
+            <li>
+              <a
+                href="waste-banks.html"
+                class="block py-2 text-primary font-medium"
+                >Bank Sampah</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="py-4 px-4 bg-muted">
+      <div class="container mx-auto">
+        <nav
+          class="flex items-center space-x-2 text-sm"
+          aria-label="Breadcrumb"
+        >
+          <a href="index.html" class="text-muted-foreground hover:text-primary"
+            >Beranda</a
+          >
+          <span class="text-muted-foreground">/</span>
+          <span class="text-foreground">Bank Sampah Sorosutan</span>
+        </nav>
+      </div>
+    </div>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="py-16 px-4">
+        <div class="container mx-auto">
+          <div class="text-center mb-12">
+            <a
+              href="index.html"
+              class="inline-flex items-center border border-border bg-background px-3 py-1 text-sm font-medium rounded-md mb-4 hover:bg-accent transition-colors"
+            >
+              <svg
+                class="h-4 w-4 mr-2"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="m12 19-7-7 7-7" />
+                <path d="M19 12H5" />
+              </svg>
+              Kembali ke Beranda
+            </a>
+            <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Bank Sampah di Sorosutan
+            </h2>
+            <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Temukan lokasi bank sampah terdekat di kelurahan Sorosutan untuk
+              menyetorkan sampah yang sudah dipilah dan mendapatkan nilai
+              ekonomis dari sampah rumah tangga Anda.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Waste Banks Grid -->
+      <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+          <h3 class="text-3xl font-bold text-center text-foreground mb-4">
+            Bank Sampah Aktif di Sorosutan
+          </h3>
+          <p class="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Berikut adalah daftar bank sampah yang beroperasi aktif di kelurahan
+            Sorosutan, lengkap dengan informasi jam operasional dan layanan yang
+            tersedia.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Bank Sampah Sorosutan Sejahtera -->
+            <article
+              class="bg-white border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <header class="mb-4">
+                <div class="flex items-center space-x-3 mb-2">
+                  <svg
+                    class="h-8 w-8 text-primary"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9,22 9,12 15,12 15,22" />
+                  </svg>
+                  <h4 class="text-xl font-semibold text-primary">
+                    Bank Sampah Sorosutan Sejahtera
+                  </h4>
+                </div>
+                <div
+                  class="bg-green-50 border border-green-200 rounded-lg px-3 py-1 inline-block"
+                >
+                  <span class="text-xs font-medium text-green-800"
+                    >Bank Sampah Utama</span
+                  >
+                </div>
+              </header>
+              <div class="space-y-3 mb-4">
+                <div>
+                  <h5 class="font-semibold text-sm mb-1">Jam Operasional:</h5>
+                  <p class="text-sm text-muted-foreground">
+                    Senin - Sabtu: 08.00 - 16.00 WIB<br />Minggu: 08.00 - 12.00
+                    WIB
+                  </p>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-1">Layanan:</h5>
+                  <ul class="text-sm text-muted-foreground space-y-1">
+                    <li>• Pembelian sampah anorganik</li>
+                    <li>• Pengolahan kompos</li>
+                    <li>• Tabungan sampah masyarakat</li>
+                    <li>• Penjualan produk daur ulang</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-1">Alamat:</h5>
+                  <p class="text-sm text-muted-foreground">
+                    Jl. Sokonandi No. 25, Sorosutan, Umbulharjo, Yogyakarta
+                  </p>
+                </div>
+              </div>
+              <a
+                href="https://www.google.com/maps/search/Jl.+Sokonandi+No.+25,+Sorosutan,+Umbulharjo,+Yogyakarta"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center w-full bg-primary text-primary-foreground px-4 py-2 text-sm font-medium rounded-md hover:bg-primary/90 transition-colors"
+              >
+                <svg
+                  class="h-4 w-4 mr-2"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Lihat di Google Maps
+              </a>
+            </article>
+
+            <!-- Bank Sampah Melati Bersih -->
+            <article
+              class="bg-white border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <header class="mb-4">
+                <div class="flex items-center space-x-3 mb-2">
+                  <svg
+                    class="h-8 w-8 text-primary"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9,22 9,12 15,12 15,22" />
+                  </svg>
+                  <h4 class="text-xl font-semibold text-primary">
+                    Bank Sampah Melati Bersih
+                  </h4>
+                </div>
+                <div
+                  class="bg-blue-50 border border-blue-200 rounded-lg px-3 py-1 inline-block"
+                >
+                  <span class="text-xs font-medium text-blue-800"
+                    >Spesialis Plastik</span
+                  >
+                </div>
+              </header>
+              <div class="space-y-3 mb-4">
+                <div>
+                  <h5 class="font-semibold text-sm mb-1">Jam Operasional:</h5>
+                  <p class="text-sm text-muted-foreground">
+                    Selasa, Kamis, Sabtu: 09.00 - 15.00 WIB
+                  </p>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-1">Layanan:</h5>
+                  <ul class="text-sm text-muted-foreground space-y-1">
+                    <li>• Fokus pada sampah plastik</li>
+                    <li>• Pembuatan ecobrick</li>
+                    <li>• Pelatihan daur ulang plastik</li>
+                    <li>• Workshop kreativitas anak</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-1">Alamat:</h5>
+                  <p class="text-sm text-muted-foreground">
+                    Jl. Parangtritis Km 4.5, Sorosutan, Umbulharjo, Yogyakarta
+                  </p>
+                </div>
+              </div>
+              <a
+                href="https://www.google.com/maps/search/Jl.+Parangtritis+Km+4.5,+Sorosutan,+Umbulharjo,+Yogyakarta"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center w-full bg-primary text-primary-foreground px-4 py-2 text-sm font-medium rounded-md hover:bg-primary/90 transition-colors"
+              >
+                <svg
+                  class="h-4 w-4 mr-2"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Lihat di Google Maps
+              </a>
+            </article>
+
+            <!-- Bank Sampah Soro Mandiri -->
+            <article
+              class="bg-white border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <header class="mb-4">
+                <div class="flex items-center space-x-3 mb-2">
+                  <svg
+                    class="h-8 w-8 text-primary"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9,22 9,12 15,12 15,22" />
+                  </svg>
+                  <h4 class="text-xl font-semibold text-primary">
+                    Bank Sampah Soro Mandiri
+                  </h4>
+                </div>
+                <div
+                  class="bg-purple-50 border border-purple-200 rounded-lg px-3 py-1 inline-block"
+                >
+                  <span class="text-xs font-medium text-purple-800"
+                    >Komunitas RT/RW</span
+                  >
+                </div>
+              </header>
+              <div class="space-y-3 mb-4">
+                <div>
+                  <h5 class="font-semibold text-sm mb-1">Jam Operasional:</h5>
+                  <p class="text-sm text-muted-foreground">
+                    Senin, Rabu, Jumat: 13.00 - 17.00 WIB
+                  </p>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-1">Layanan:</h5>
+                  <ul class="text-sm text-muted-foreground space-y-1">
+                    <li>• Bank sampah berbasis RT/RW</li>
+                    <li>• Arisan sampah bulanan</li>
+                    <li>• Pelatihan ibu-ibu PKK</li>
+                    <li>• Produk kerajinan dari sampah</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-1">Alamat:</h5>
+                  <p class="text-sm text-muted-foreground">
+                    Jl. Wonosari Km 7, RT 03/RW 15, Sorosutan, Umbulharjo,
+                    Yogyakarta
+                  </p>
+                </div>
+              </div>
+              <a
+                href="https://www.google.com/maps/search/Jl.+Wonosari+Km+7,+Sorosutan,+Umbulharjo,+Yogyakarta"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center w-full bg-primary text-primary-foreground px-4 py-2 text-sm font-medium rounded-md hover:bg-primary/90 transition-colors"
+              >
+                <svg
+                  class="h-4 w-4 mr-2"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Lihat di Google Maps
+              </a>
+            </article>
+
+            <!-- Bank Sampah Harapan Baru -->
+            <article
+              class="bg-white border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <header class="mb-4">
+                <div class="flex items-center space-x-3 mb-2">
+                  <svg
+                    class="h-8 w-8 text-primary"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9,22 9,12 15,12 15,22" />
+                  </svg>
+                  <h4 class="text-xl font-semibold text-primary">
+                    Bank Sampah Harapan Baru
+                  </h4>
+                </div>
+                <div
+                  class="bg-orange-50 border border-orange-200 rounded-lg px-3 py-1 inline-block"
+                >
+                  <span class="text-xs font-medium text-orange-800"
+                    >Digital & Pickup</span
+                  >
+                </div>
+              </header>
+              <div class="space-y-3 mb-4">
+                <div>
+                  <h5 class="font-semibold text-sm mb-1">Jam Operasional:</h5>
+                  <p class="text-sm text-muted-foreground">
+                    Senin - Jumat: 08.00 - 17.00 WIB<br />Sabtu: 08.00 - 14.00
+                    WIB
+                  </p>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-1">Layanan:</h5>
+                  <ul class="text-sm text-muted-foreground space-y-1">
+                    <li>• Sistem tabungan digital</li>
+                    <li>• Layanan pickup sampah</li>
+                    <li>• WhatsApp booking system</li>
+                    <li>• Marketplace produk ramah lingkungan</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-1">Alamat:</h5>
+                  <p class="text-sm text-muted-foreground">
+                    Jl. Ahmad Dahlan No. 88, Sorosutan, Umbulharjo, Yogyakarta
+                  </p>
+                </div>
+              </div>
+              <a
+                href="https://www.google.com/maps/search/Jl.+Ahmad+Dahlan+No.+88,+Sorosutan,+Umbulharjo,+Yogyakarta"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center w-full bg-primary text-primary-foreground px-4 py-2 text-sm font-medium rounded-md hover:bg-primary/90 transition-colors"
+              >
+                <svg
+                  class="h-4 w-4 mr-2"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Lihat di Google Maps
+              </a>
+            </article>
+
+            <!-- Bank Sampah Sorosutan Hijau -->
+            <article
+              class="bg-white border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <header class="mb-4">
+                <div class="flex items-center space-x-3 mb-2">
+                  <svg
+                    class="h-8 w-8 text-primary"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9,22 9,12 15,12 15,22" />
+                  </svg>
+                  <h4 class="text-xl font-semibold text-primary">
+                    Bank Sampah Sorosutan Hijau
+                  </h4>
+                </div>
+                <div
+                  class="bg-green-50 border border-green-200 rounded-lg px-3 py-1 inline-block"
+                >
+                  <span class="text-xs font-medium text-green-800"
+                    >Organik & Kompos</span
+                  >
+                </div>
+              </header>
+              <div class="space-y-3 mb-4">
+                <div>
+                  <h5 class="font-semibold text-sm mb-1">Jam Operasional:</h5>
+                  <p class="text-sm text-muted-foreground">
+                    Setiap Hari: 07.00 - 18.00 WIB
+                  </p>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-1">Layanan:</h5>
+                  <ul class="text-sm text-muted-foreground space-y-1">
+                    <li>• Pengolahan sampah organik</li>
+                    <li>• Produksi pupuk kompos</li>
+                    <li>• Budidaya maggot BSF</li>
+                    <li>• Pelatihan urban farming</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-1">Alamat:</h5>
+                  <p class="text-sm text-muted-foreground">
+                    Jl. Bibis Raya No. 15, Sorosutan, Umbulharjo, Yogyakarta
+                  </p>
+                </div>
+              </div>
+              <a
+                href="https://www.google.com/maps/search/Jl.+Bibis+Raya+No.+15,+Sorosutan,+Umbulharjo,+Yogyakarta"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center w-full bg-primary text-primary-foreground px-4 py-2 text-sm font-medium rounded-md hover:bg-primary/90 transition-colors"
+              >
+                <svg
+                  class="h-4 w-4 mr-2"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Lihat di Google Maps
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- How to Join Section -->
+      <section class="py-16 px-4">
+        <div class="container mx-auto">
+          <h3 class="text-3xl font-bold text-center text-foreground mb-12">
+            Cara Bergabung dengan Bank Sampah
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <article class="text-center">
+              <div
+                class="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold"
+              >
+                1
+              </div>
+              <h4 class="text-lg font-semibold mb-2">Daftar Keanggotaan</h4>
+              <p class="text-sm text-muted-foreground">
+                Datang langsung ke bank sampah pilihan Anda dengan membawa KTP
+                dan mengisi formulir pendaftaran.
+              </p>
+            </article>
+
+            <article class="text-center">
+              <div
+                class="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold"
+              >
+                2
+              </div>
+              <h4 class="text-lg font-semibold mb-2">Pilah Sampah di Rumah</h4>
+              <p class="text-sm text-muted-foreground">
+                Mulai memilah sampah organik dan anorganik di rumah sesuai
+                dengan panduan yang telah dipelajari.
+              </p>
+            </article>
+
+            <article class="text-center">
+              <div
+                class="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold"
+              >
+                3
+              </div>
+              <h4 class="text-lg font-semibold mb-2">Setor Sampah</h4>
+              <p class="text-sm text-muted-foreground">
+                Bawa sampah yang sudah dipilah ke bank sampah sesuai jadwal
+                operasional untuk ditimbang dan dihitung nilainya.
+              </p>
+            </article>
+
+            <article class="text-center">
+              <div
+                class="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold"
+              >
+                4
+              </div>
+              <h4 class="text-lg font-semibold mb-2">Nikmati Keuntungan</h4>
+              <p class="text-sm text-muted-foreground">
+                Dapatkan hasil tabungan dari penjualan sampah dan ikut serta
+                dalam program-program bermanfaat lainnya.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="py-16 px-4 bg-primary text-primary-foreground">
+        <div class="container mx-auto text-center">
+          <h3 class="text-3xl font-bold mb-4">
+            Siap Bergabung dengan Program Bank Sampah?
+          </h3>
+          <p class="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Mulai kelola sampah rumah tangga Anda dengan cara yang
+            menguntungkan. Pelajari cara memilah sampah yang benar sebelum
+            menyetorkan ke bank sampah.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="waste-types.html"
+              class="inline-flex items-center justify-center bg-secondary text-secondary-foreground px-6 py-3 font-medium rounded-md hover:bg-secondary/90 transition-colors"
+            >
+              Pelajari Pemilahan Sampah
+            </a>
+            <a
+              href="waste-management.html"
+              class="inline-flex items-center justify-center bg-transparent border border-primary-foreground text-primary-foreground px-6 py-3 font-medium rounded-md hover:bg-primary-foreground hover:text-primary transition-colors"
+            >
+              Metode Pengelolaan
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-muted py-12 px-4">
+      <div class="container mx-auto text-center">
+        <div class="flex items-center justify-center space-x-2 mb-4">
+          <svg
+            class="h-6 w-6 text-primary"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"
+            />
+            <path
+              d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"
+            />
+            <path d="m14 16-3 3 3 3" />
+          </svg>
+          <span class="text-lg font-semibold">Ngabersih Umbulharjo</span>
+        </div>
+        <p class="text-muted-foreground">
+          Bersama membangun kesadaran pengelolaan sampah untuk Umbulharjo yang
+          lebih bersih dan berkelanjutan.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1078 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dampak Sampah Tidak Terkelola - Ngabersih Umbulharjo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#21C45D",
+              "primary-foreground": "#FAFAFA",
+              secondary: "#F0F4F0",
+              "secondary-foreground": "#1A4B28",
+              muted: "#F0F4F0",
+              "muted-foreground": "#6E757C",
+              accent: "#B8E6CC",
+              "accent-foreground": "#1A4B28",
+              border: "#E2E9E4",
+              background: "#FFFFFF",
+              foreground: "#222629",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-gradient-to-br from-green-50 via-white to-blue-50 min-h-screen"
+  >
+    <!-- Header -->
+    <header class="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2 sm:space-x-3">
+            <!-- Logo Images -->
+            <div class="flex items-center space-x-2 sm:space-x-3">
+              <img
+                src="./images/logo-sorosutan.jpeg"
+                alt="Official Logo"
+                class="h-12 w-12 sm:h-16 sm:w-16 object-contain"
+              />
+              <img
+                src="./images/logo-ugm.jpeg"
+                alt="University Logo"
+                class="h-12 w-12 sm:h-15 sm:w-15 object-contain"
+              />
+              <img
+                src="./images/logo-ngabersih-umbulharjo.png"
+                alt="KKN PPM UGM Umbulharjo Logo"
+                class="h-12 w-12 sm:h-15 sm:w-15 object-contain"
+              />
+            </div>
+            <h1
+              class="text-lg sm:text-xl lg:text-2xl font-bold text-foreground"
+            >
+              Ngabersih Umbulharjo
+            </h1>
+          </div>
+          <!-- Mobile menu button -->
+          <input type="checkbox" id="mobile-menu-toggle" class="hidden peer" />
+          <label
+            for="mobile-menu-toggle"
+            class="md:hidden cursor-pointer p-2"
+            aria-label="Toggle mobile menu"
+          >
+            <svg
+              class="w-6 h-6 text-foreground"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </label>
+
+          <!-- Desktop navigation -->
+          <nav class="hidden md:flex space-x-6" aria-label="Main navigation">
+            <ul class="flex space-x-6">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-muted-foreground hover:text-primary transition-colors"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="waste-types.html"
+                  class="text-muted-foreground hover:text-primary transition-colors"
+                  >Jenis Sampah</a
+                >
+              </li>
+              <li>
+                <a
+                  href="waste-management.html"
+                  class="text-muted-foreground hover:text-primary transition-colors"
+                  >Pengelolaan</a
+                >
+              </li>
+              <li>
+                <a href="waste-impacts.html" class="text-primary font-medium"
+                  >Dampak</a
+                >
+              </li>
+              <li>
+                <a
+                  href="waste-banks.html"
+                  class="text-muted-foreground hover:text-primary transition-colors"
+                  >Bank Sampah</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Mobile navigation -->
+        <nav
+          class="md:hidden peer-checked:block hidden mt-4 pb-4 border-t border-border pt-4"
+          aria-label="Mobile navigation"
+        >
+          <ul class="flex flex-col space-y-3">
+            <li>
+              <a
+                href="index.html"
+                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
+                >Beranda</a
+              >
+            </li>
+            <li>
+              <a
+                href="waste-types.html"
+                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
+                >Jenis Sampah</a
+              >
+            </li>
+            <li>
+              <a
+                href="waste-management.html"
+                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
+                >Pengelolaan</a
+              >
+            </li>
+            <li>
+              <a
+                href="waste-impacts.html"
+                class="block py-2 text-primary font-medium"
+                >Dampak</a
+              >
+            </li>
+            <li>
+              <a
+                href="waste-banks.html"
+                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
+                >Bank Sampah</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="py-4 px-4 bg-muted">
+      <div class="container mx-auto">
+        <nav
+          class="flex items-center space-x-2 text-sm"
+          aria-label="Breadcrumb"
+        >
+          <a href="index.html" class="text-muted-foreground hover:text-primary"
+            >Beranda</a
+          >
+          <span class="text-muted-foreground">/</span>
+          <span class="text-foreground">Dampak Sampah Tidak Terkelola</span>
+        </nav>
+      </div>
+    </div>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="py-16 px-4">
+        <div class="container mx-auto">
+          <div class="text-center mb-12">
+            <a
+              href="index.html"
+              class="inline-flex items-center border border-border bg-background px-3 py-1 text-sm font-medium rounded-md mb-4 hover:bg-accent transition-colors"
+            >
+              <svg
+                class="h-4 w-4 mr-2"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="m12 19-7-7 7-7" />
+                <path d="M19 12H5" />
+              </svg>
+              Kembali ke Beranda
+            </a>
+            <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Dampak Sampah Tidak Terkelola
+            </h2>
+            <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Memahami konsekuensi serius dari pengelolaan sampah yang buruk
+              terhadap kesehatan, lingkungan, dan ekonomi masyarakat.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Health Impacts -->
+      <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+          <h3 class="text-3xl font-bold text-center text-foreground mb-4">
+            Dampak Terhadap Kesehatan Masyarakat
+          </h3>
+          <p class="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Sampah yang tidak dikelola dengan baik dapat menimbulkan berbagai
+            masalah kesehatan serius bagi masyarakat.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="bg-red-50 border-2 border-red-200 rounded-lg p-6">
+              <div class="flex items-center space-x-3 mb-4">
+                <svg
+                  class="h-8 w-8 text-red-600"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5Z"
+                  />
+                  <path d="M12 5L8 21l4-7 4 7-4-16" />
+                </svg>
+                <h4 class="text-lg font-semibold text-red-700">
+                  Penyakit Pernapasan
+                </h4>
+              </div>
+              <ul class="text-sm space-y-2">
+                <li class="flex items-start space-x-2">
+                  <div class="w-1 h-1 bg-red-600 rounded-full mt-2"></div>
+                  <span
+                    >Asma dan bronkitis akibat polusi udara dari pembakaran
+                    sampah</span
+                  >
+                </li>
+                <li class="flex items-start space-x-2">
+                  <div class="w-1 h-1 bg-red-600 rounded-full mt-2"></div>
+                  <span>Iritasi mata dan hidung dari gas beracun</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <div class="w-1 h-1 bg-red-600 rounded-full mt-2"></div>
+                  <span>Infeksi saluran pernapasan atas pada anak-anak</span>
+                </li>
+              </ul>
+            </article>
+
+            <article
+              class="bg-orange-50 border-2 border-orange-200 rounded-lg p-6"
+            >
+              <div class="flex items-center space-x-3 mb-4">
+                <svg
+                  class="h-8 w-8 text-orange-600"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M12 2v20" />
+                  <path d="m15 5-3-3-3 3" />
+                  <path d="m9 9 3 3 3-3" />
+                </svg>
+                <h4 class="text-lg font-semibold text-orange-700">
+                  Penyakit Menular
+                </h4>
+              </div>
+              <ul class="text-sm space-y-2">
+                <li class="flex items-start space-x-2">
+                  <div class="w-1 h-1 bg-orange-600 rounded-full mt-2"></div>
+                  <span>Diare dan kolera dari kontaminasi air minum</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <div class="w-1 h-1 bg-orange-600 rounded-full mt-2"></div>
+                  <span>Hepatitis A dan tifus dari sanitasi buruk</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <div class="w-1 h-1 bg-orange-600 rounded-full mt-2"></div>
+                  <span>Infeksi kulit akibat kontak langsung</span>
+                </li>
+              </ul>
+            </article>
+
+            <article
+              class="bg-yellow-50 border-2 border-yellow-200 rounded-lg p-6"
+            >
+              <div class="flex items-center space-x-3 mb-4">
+                <svg
+                  class="h-8 w-8 text-yellow-600"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <path d="m21 21-4.35-4.35" />
+                </svg>
+                <h4 class="text-lg font-semibold text-yellow-700">
+                  Penyakit Berbahaya
+                </h4>
+              </div>
+              <ul class="text-sm space-y-2">
+                <li class="flex items-start space-x-2">
+                  <div class="w-1 h-1 bg-yellow-600 rounded-full mt-2"></div>
+                  <span>Demam berdarah dengue dari genangan air kotor</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <div class="w-1 h-1 bg-yellow-600 rounded-full mt-2"></div>
+                  <span>Malaria dari habitat nyamuk di sampah organik</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <div class="w-1 h-1 bg-yellow-600 rounded-full mt-2"></div>
+                  <span>Leptospirosis dari air tercemar urine tikus</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Environmental Impacts -->
+      <section class="py-16 px-4">
+        <div class="container mx-auto">
+          <h3 class="text-3xl font-bold text-center text-foreground mb-12">
+            Dampak Terhadap Lingkungan
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <article class="bg-white border border-border rounded-lg p-6">
+              <header class="mb-6">
+                <div class="flex items-center space-x-3 mb-2">
+                  <svg
+                    class="h-8 w-8 text-blue-600"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                  <h4 class="text-xl font-semibold">
+                    Pencemaran Air dan Tanah
+                  </h4>
+                </div>
+                <p class="text-sm text-muted-foreground">
+                  Sampah yang dibuang sembarangan mencemari sumber air dan
+                  merusak kesuburan tanah.
+                </p>
+              </header>
+              <div class="space-y-4">
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Pencemaran Air:</h5>
+                  <ul class="text-sm space-y-1">
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-blue-600 rounded-full"></div>
+                      <span>Lindi dari TPA mencemari air tanah</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-blue-600 rounded-full"></div>
+                      <span>Mikroplastik memasuki rantai makanan laut</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-blue-600 rounded-full"></div>
+                      <span>Bahan kimia beracun meresap ke sungai</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Pencemaran Tanah:</h5>
+                  <ul class="text-sm space-y-1">
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-blue-600 rounded-full"></div>
+                      <span>Logam berat meracuni kesuburan tanah</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-blue-600 rounded-full"></div>
+                      <span>Plastik mengubah struktur dan pH tanah</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-blue-600 rounded-full"></div>
+                      <span>Bahan kimia mengganggu mikroorganisme</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="bg-white border border-border rounded-lg p-6">
+              <header class="mb-6">
+                <div class="flex items-center space-x-3 mb-2">
+                  <svg
+                    class="h-8 w-8 text-green-600"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M12 2v20" />
+                    <path d="m15 5-3-3-3 3" />
+                    <path d="m9 9 3 3 3-3" />
+                  </svg>
+                  <h4 class="text-xl font-semibold">Kerusakan Ekosistem</h4>
+                </div>
+                <p class="text-sm text-muted-foreground">
+                  Sampah merusak habitat alami dan mengancam keberlangsungan
+                  ekosistem.
+                </p>
+              </header>
+              <div class="space-y-4">
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">
+                    Kehilangan Biodiversitas:
+                  </h5>
+                  <ul class="text-sm space-y-1">
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-green-600 rounded-full"></div>
+                      <span>Hewan laut mati karena menelan plastik</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-green-600 rounded-full"></div>
+                      <span>Habitat burung dan mamalia terganggu</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-green-600 rounded-full"></div>
+                      <span>Spesies endemik terancam punah</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Perubahan Iklim:</h5>
+                  <ul class="text-sm space-y-1">
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-green-600 rounded-full"></div>
+                      <span
+                        >Gas metana dari TPA memperparah efek rumah kaca</span
+                      >
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-green-600 rounded-full"></div>
+                      <span>Pembakaran sampah melepas CO2 berlebih</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                      <div class="w-1 h-1 bg-green-600 rounded-full"></div>
+                      <span>Deforestasi untuk tempat pembuangan baru</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Economic and Social Impacts -->
+      <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+          <h3 class="text-3xl font-bold text-center text-foreground mb-12">
+            Dampak Ekonomi dan Sosial
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <article class="text-center">
+              <div
+                class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="h-8 w-8"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <line x1="12" y1="1" x2="12" y2="23" />
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg>
+              </div>
+              <h4 class="text-lg font-semibold mb-3">Kerugian Ekonomi</h4>
+              <ul class="text-sm text-muted-foreground space-y-2">
+                <li>Biaya kesehatan masyarakat meningkat</li>
+                <li>Penurunan nilai properti di area kotor</li>
+                <li>Biaya pembersihan dan rehabilitasi tinggi</li>
+                <li>Kehilangan potensi wisata dan investasi</li>
+              </ul>
+            </article>
+
+            <article class="text-center">
+              <div
+                class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="h-8 w-8"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <h4 class="text-lg font-semibold mb-3">Masalah Sosial</h4>
+              <ul class="text-sm text-muted-foreground space-y-2">
+                <li>Kesenjangan kesehatan antar wilayah</li>
+                <li>Konflik sosial akibat lokasi TPA</li>
+                <li>Penurunan kualitas hidup masyarakat</li>
+                <li>Diskriminasi terhadap pekerja sampah</li>
+              </ul>
+            </article>
+
+            <article class="text-center">
+              <div
+                class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="h-8 w-8"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5" />
+                  <path d="M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <h4 class="text-lg font-semibold mb-3">Dampak Infrastruktur</h4>
+              <ul class="text-sm text-muted-foreground space-y-2">
+                <li>Penyumbatan saluran air dan banjir</li>
+                <li>Kerusakan jalan akibat kendaraan sampah</li>
+                <li>Overload sistem pengolahan limbah</li>
+                <li>Kebutuhan infrastruktur tambahan</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Studies -->
+      <section class="py-16 px-4">
+        <div class="container mx-auto">
+          <h3 class="text-3xl font-bold text-center text-foreground mb-12">
+            Studi Kasus: Dampak Nyata di Indonesia
+          </h3>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <article
+              class="bg-white border border-border rounded-lg overflow-hidden"
+            >
+              <div
+                class="bg-gradient-to-r from-red-500 to-orange-500 text-white p-6"
+              >
+                <h4 class="text-xl font-semibold mb-2">
+                  Banjir Jakarta akibat Sampah
+                </h4>
+                <p class="text-sm opacity-90">
+                  Studi kasus: Sampah plastik menyumbat saluran air
+                </p>
+              </div>
+              <div class="p-6 space-y-4">
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Masalah:</h5>
+                  <ul class="text-sm text-muted-foreground space-y-1">
+                    <li>
+                      • 60% penyumbatan saluran air disebabkan sampah plastik
+                    </li>
+                    <li>• Banjir tahunan merendam 40% wilayah Jakarta</li>
+                    <li>
+                      • Kerugian ekonomi mencapai Rp 5.2 triliun per tahun
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Dampak:</h5>
+                  <ul class="text-sm text-muted-foreground space-y-1">
+                    <li>• 1.7 juta orang terdampak banjir tahunan</li>
+                    <li>• Peningkatan penyakit kulit dan diare 300%</li>
+                    <li>• Kerugian bisnis dan transportasi masif</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="bg-white border border-border rounded-lg overflow-hidden"
+            >
+              <div
+                class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white p-6"
+              >
+                <h4 class="text-xl font-semibold mb-2">
+                  Pencemaran Teluk Jakarta
+                </h4>
+                <p class="text-sm opacity-90">
+                  Studi kasus: Mikroplastik dalam rantai makanan laut
+                </p>
+              </div>
+              <div class="p-6 space-y-4">
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Temuan Penelitian:</h5>
+                  <ul class="text-sm text-muted-foreground space-y-1">
+                    <li>• 90% ikan di Teluk Jakarta mengandung mikroplastik</li>
+                    <li>• 2.3 juta ton sampah plastik masuk laut tiap tahun</li>
+                    <li>�� Kualitas air laut menurun drastis</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-sm mb-2">Konsekuensi:</h5>
+                  <ul class="text-sm text-muted-foreground space-y-1">
+                    <li>• Penurunan tangkapan nelayan 60%</li>
+                    <li>• Risiko kesehatan konsumen ikan tinggi</li>
+                    <li>• Kerusakan ekosistem terumbu karang</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Study: Yogyakarta Waste Impacts -->
+      <section class="py-16 px-4 bg-gray-50">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold text-center text-foreground mb-4">
+            Studi Kasus: Dampak Sampah di Yogyakarta
+          </h2>
+          <p class="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+            Analisis mendalam tentang dampak nyata pengelolaan sampah yang tidak
+            tepat terhadap lingkungan dan kesehatan masyarakat di Provinsi
+            Daerah Istimewa Yogyakarta.
+          </p>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Environmental Impact -->
+            <article class="bg-white border border-border rounded-lg p-8">
+              <header class="mb-6">
+                <div class="flex items-center space-x-3 mb-3">
+                  <div
+                    class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M12 2v20" />
+                      <path d="m15 5-3-3-3 3" />
+                      <path d="m9 9 3 3 3-3" />
+                    </svg>
+                  </div>
+                  <h3 class="text-2xl font-semibold text-foreground">
+                    Dampak Lingkungan
+                  </h3>
+                </div>
+                <p class="text-muted-foreground">
+                  Kasus pencemaran dari TPA Piyungan dan dampaknya terhadap
+                  ekosistem lokal
+                </p>
+              </header>
+
+              <div class="space-y-6">
+                <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                  <h4 class="font-semibold text-red-800 mb-3">
+                    Pencemaran Air Tanah TPA Piyungan
+                  </h4>
+                  <div class="space-y-3">
+                    <p class="text-sm text-muted-foreground">
+                      TPA Piyungan, yang melayani Kota Yogyakarta dan Kabupaten
+                      Bantul, telah mencemari sumur-sumur warga sekitar dengan
+                      lindi (leachate) sejak 2015.
+                    </p>
+                    <ul class="text-sm space-y-2">
+                      <li class="flex items-start space-x-2">
+                        <div
+                          class="w-2 h-2 bg-red-600 rounded-full mt-1.5"
+                        ></div>
+                        <span
+                          ><strong>65% sumur warga</strong> dalam radius 500m
+                          mengandung bakteri E.coli</span
+                        >
+                      </li>
+                      <li class="flex items-start space-x-2">
+                        <div
+                          class="w-2 h-2 bg-red-600 rounded-full mt-1.5"
+                        ></div>
+                        <span
+                          ><strong>Kadar BOD mencapai 180 mg/L</strong> (standar
+                          normal: 6 mg/L)</span
+                        >
+                      </li>
+                      <li class="flex items-start space-x-2">
+                        <div
+                          class="w-2 h-2 bg-red-600 rounded-full mt-1.5"
+                        ></div>
+                        <span
+                          ><strong>pH air tanah turun</strong> dari 7.2 menjadi
+                          5.8 (asam)</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-orange-50 border border-orange-200 rounded-lg p-4"
+                >
+                  <h4 class="font-semibold text-orange-800 mb-3">
+                    Dampak pada Sungai Code
+                  </h4>
+                  <div class="space-y-3">
+                    <p class="text-sm text-muted-foreground">
+                      Aliran lindi dari TPA Piyungan mengalir ke Sungai Code,
+                      mencemari sumber air utama Kota Yogyakarta.
+                    </p>
+                    <ul class="text-sm space-y-2">
+                      <li class="flex items-start space-x-2">
+                        <div
+                          class="w-2 h-2 bg-orange-600 rounded-full mt-1.5"
+                        ></div>
+                        <span
+                          ><strong>Kualitas air menurun 40%</strong> dibanding
+                          tahun 2010</span
+                        >
+                      </li>
+                      <li class="flex items-start space-x-2">
+                        <div
+                          class="w-2 h-2 bg-orange-600 rounded-full mt-1.5"
+                        ></div>
+                        <span
+                          ><strong>12 spesies ikan</strong> punah dari ekosistem
+                          sungai</span
+                        >
+                      </li>
+                      <li class="flex items-start space-x-2">
+                        <div
+                          class="w-2 h-2 bg-orange-600 rounded-full mt-1.5"
+                        ></div>
+                        <span
+                          ><strong>Area pertanian tercemar</strong> hingga
+                          radius 2 km</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                  <h5 class="font-semibold text-sm mb-2 text-gray-800">
+                    📊 Data Monitoring DLHK DIY 2023
+                  </h5>
+                  <p class="text-xs text-muted-foreground">
+                    Sumber: Dinas Lingkungan Hidup dan Kehutanan Daerah Istimewa
+                    Yogyakarta, Laporan Pemantauan Kualitas Air Tanah 2023
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Health Impact -->
+            <article class="bg-white border border-border rounded-lg p-8">
+              <header class="mb-6">
+                <div class="flex items-center space-x-3 mb-3">
+                  <div
+                    class="w-12 h-12 bg-red-100 text-red-600 rounded-full flex items-center justify-center"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5Z"
+                      />
+                      <path d="M12 5L8 21l4-7 4 7-4-16" />
+                    </svg>
+                  </div>
+                  <h3 class="text-2xl font-semibold text-foreground">
+                    Dampak Kesehatan
+                  </h3>
+                </div>
+                <p class="text-muted-foreground">
+                  Kondisi kesehatan masyarakat di sekitar area pengelolaan
+                  sampah bermasalah
+                </p>
+              </header>
+
+              <div class="space-y-6">
+                <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                  <h4 class="font-semibold text-red-800 mb-3">
+                    Penyakit Pernapasan Akut
+                  </h4>
+                  <div class="space-y-3">
+                    <p class="text-sm text-muted-foreground">
+                      Pembakaran sampah ilegal dan gas metana dari TPA Piyungan
+                      menyebabkan peningkatan drastis kasus penyakit pernapasan.
+                    </p>
+                    <ul class="text-sm space-y-2">
+                      <li class="flex items-start space-x-2">
+                        <div
+                          class="w-2 h-2 bg-red-600 rounded-full mt-1.5"
+                        ></div>
+                        <span
+                          ><strong>Asma pada anak naik 45%</strong> dalam 3
+                          tahun terakhir</span
+                        >
+                      </li>
+                      <li class="flex items-start space-x-2">
+                        <div
+                          class="w-2 h-2 bg-red-600 rounded-full mt-1.5"
+                        ></div>
+                        <span
+                          ><strong>ISPA meningkat 60%</strong> di Desa Sitimulyo
+                          dan sekitarnya</span
+                        >
+                      </li>
+                      <li class="flex items-start space-x-2">
+                        <div
+                          class="w-2 h-2 bg-red-600 rounded-full mt-1.5"
+                        ></div>
+                        <span
+                          ><strong>1.200 kasus bronkitis</strong> dilaporkan
+                          tahun 2023</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-yellow-50 border border-yellow-200 rounded-lg p-4"
+                >
+                  <h4 class="font-semibold text-yellow-800 mb-3">
+                    Penyakit Menular dan Vektor
+                  </h4>
+                  <div class="space-y-3">
+                    <p class="text-sm text-muted-foreground">
+                      Genangan air kotor dan tumpukan sampah menciptakan habitat
+                      ideal untuk penyebaran penyakit menular.
+                    </p>
+                    <ul class="text-sm space-y-2">
+                      <li class="flex items-start space-x-2">
+                        <div
+                          class="w-2 h-2 bg-yellow-600 rounded-full mt-1.5"
+                        ></div>
+                        <span
+                          ><strong>DBD naik 120%</strong> di wilayah Umbulharjo
+                          dan Banguntapan</span
+                        >
+                      </li>
+                      <li class="flex items-start space-x-2">
+                        <div
+                          class="w-2 h-2 bg-yellow-600 rounded-full mt-1.5"
+                        ></div>
+                        <span
+                          ><strong>785 kasus diare</strong> akibat air tercemar
+                          (2023)</span
+                        >
+                      </li>
+                      <li class="flex items-start space-x-2">
+                        <div
+                          class="w-2 h-2 bg-yellow-600 rounded-full mt-1.5"
+                        ></div>
+                        <span
+                          ><strong>Hepatitis A meningkat 30%</strong> pada
+                          balita di area TPA</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-purple-50 border border-purple-200 rounded-lg p-4"
+                >
+                  <h4 class="font-semibold text-purple-800 mb-3">
+                    Dampak Psikososial
+                  </h4>
+                  <div class="space-y-3">
+                    <p class="text-sm text-muted-foreground">
+                      Kondisi lingkungan yang buruk mempengaruhi kesehatan
+                      mental masyarakat.
+                    </p>
+                    <ul class="text-sm space-y-2">
+                      <li class="flex items-start space-x-2">
+                        <div
+                          class="w-2 h-2 bg-purple-600 rounded-full mt-1.5"
+                        ></div>
+                        <span
+                          ><strong>Stress lingkungan</strong> dialami 70% warga
+                          sekitar TPA</span
+                        >
+                      </li>
+                      <li class="flex items-start space-x-2">
+                        <div
+                          class="w-2 h-2 bg-purple-600 rounded-full mt-1.5"
+                        ></div>
+                        <span
+                          ><strong>Gangguan tidur</strong> pada 65% anak akibat
+                          bau dan polusi</span
+                        >
+                      </li>
+                      <li class="flex items-start space-x-2">
+                        <div
+                          class="w-2 h-2 bg-purple-600 rounded-full mt-1.5"
+                        ></div>
+                        <span
+                          ><strong>Kualitas hidup menurun</strong> berdasar
+                          survei WHO 2023</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                  <h5 class="font-semibold text-sm mb-2 text-gray-800">
+                    🏥 Data Dinkes DIY & Puskesmas Bantul
+                  </h5>
+                  <p class="text-xs text-muted-foreground">
+                    Sumber: Dinas Kesehatan DIY, Profil Kesehatan Masyarakat
+                    2023; Puskesmas Bantul I, Laporan Surveilans Epidemiologi
+                    2023
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Key Findings Summary -->
+          <div class="mt-12 bg-white border border-border rounded-lg p-8">
+            <h3 class="text-2xl font-semibold text-center text-foreground mb-6">
+              Temuan Kunci dan Rekomendasi
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <span class="text-2xl font-bold">3x</span>
+                </div>
+                <h4 class="font-semibold mb-2">Peningkatan Penyakit</h4>
+                <p class="text-sm text-muted-foreground">
+                  Rata-rata peningkatan kasus penyakit terkait lingkungan dalam
+                  5 tahun terakhir
+                </p>
+              </div>
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <span class="text-2xl font-bold">65%</span>
+                </div>
+                <h4 class="font-semibold mb-2">Air Tercemar</h4>
+                <p class="text-sm text-muted-foreground">
+                  Persentase sumber air bersih yang terkontaminasi di area
+                  sekitar TPA
+                </p>
+              </div>
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <span class="text-2xl font-bold">2km</span>
+                </div>
+                <h4 class="font-semibold mb-2">Radius Dampak</h4>
+                <p class="text-sm text-muted-foreground">
+                  Area yang terdampak pencemaran lingkungan dari pusat
+                  pengelolaan sampah
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="mt-8 bg-primary-50 border border-primary-200 rounded-lg p-6"
+            >
+              <h4 class="font-semibold text-primary-800 mb-3 flex items-center">
+                <svg
+                  class="h-5 w-5 mr-2"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M12 2v20" />
+                  <path d="m17 5-5-5-5 5" />
+                  <path d="m7 15 5 5 5-5" />
+                </svg>
+                Urgensi Tindakan Pengelolaan Sampah
+              </h4>
+              <p class="text-sm text-muted-foreground">
+                Data ini menunjukkan perlunya implementasi segera sistem
+                pengelolaan sampah yang terintegrasi, meliputi pengurangan dari
+                sumber, pemilahan yang tepat, dan teknologi pengolahan ramah
+                lingkungan untuk mencegah dampak lebih lanjut pada kesehatan
+                masyarakat dan lingkungan di Yogyakarta.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Solutions Preview -->
+      <section
+        class="py-16 px-4 bg-gradient-to-r from-primary to-green-600 text-white"
+      >
+        <div class="container mx-auto text-center">
+          <h3 class="text-3xl font-bold mb-4">Solusi Dimulai dari Kita</h3>
+          <p class="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Dampak negatif sampah dapat dicegah dengan pengelolaan yang tepat.
+            Mari belajar cara memilah, mengelola, dan memanfaatkan sampah dengan
+            bijak.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="waste-types.html"
+              class="inline-flex items-center justify-center bg-white text-primary px-6 py-3 font-medium rounded-md hover:bg-gray-100 transition-colors"
+            >
+              Pelajari Pemilahan Sampah
+            </a>
+            <a
+              href="waste-management.html"
+              class="inline-flex items-center justify-center bg-transparent border border-white text-white px-6 py-3 font-medium rounded-md hover:bg-white hover:text-primary transition-colors"
+            >
+              Metode Pengelolaan
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-muted py-12 px-4">
+      <div class="container mx-auto text-center">
+        <div class="flex items-center justify-center space-x-2 mb-4">
+          <svg
+            class="h-6 w-6 text-primary"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"
+            />
+            <path
+              d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"
+            />
+            <path d="m14 16-3 3 3 3" />
+          </svg>
+          <span class="text-lg font-semibold">Ngabersih Umbulharjo</span>
+        </div>
+        <p class="text-muted-foreground">
+          Bersama membangun kesadaran pengelolaan sampah untuk Umbulharjo yang
+          lebih bersih dan berkelanjutan.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
