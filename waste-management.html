@@ -34,144 +34,59 @@
     class="bg-gradient-to-br from-green-50 via-white to-blue-50 min-h-screen"
   >
     <!-- Header -->
-    <header class="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-      <div class="container mx-auto px-4 py-4">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center space-x-2 sm:space-x-3">
-            <!-- Logo Images -->
-            <div class="flex items-center space-x-2 sm:space-x-3">
-              <img
-                src="./images/logo-sorosutan.jpeg"
-                alt="Official Logo"
-                class="h-12 w-12 sm:h-16 sm:w-16 object-contain"
-              />
-              <img
-                src="./images/logo-ugm.jpeg"
-                alt="University Logo"
-                class="h-12 w-12 sm:h-15 sm:w-15 object-contain"
-              />
-              <img
-                src="./images/logo-ngabersih-umbulharjo.png"
-                alt="KKN PPM UGM Umbulharjo Logo"
-                class="h-12 w-12 sm:h-15 sm:w-15 object-contain"
-              />
-            </div>
-            <h1
-              class="text-lg sm:text-xl lg:text-2xl font-bold text-foreground"
-            >
-              Ngabersih Umbulharjo
-            </h1>
-          </div>
-
-          <!-- Mobile menu button -->
-          <!-- <input type="checkbox" id="mobile-menu-toggle" class="hidden peer" />
-          <label
-            for="mobile-menu-toggle"
-            class="lg:hidden cursor-pointer p-2"
-            aria-label="Toggle mobile menu"
-          >
-            <svg
-              class="w-6 h-6 text-foreground"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </label> -->
-
-          <!-- Desktop navigation - adjusted breakpoint from md to lg -->
-          <nav class="hidden lg:flex" aria-label="Main navigation">
-            <ul class="flex space-x-4 xl:space-x-6">
-              <li>
-                <a
-                  href="index.html"
-                  class="text-sm lg:text-base text-muted-foreground hover:text-primary transition-colors whitespace-nowrap"
-                  >Beranda</a
-                >
-              </li>
-              <li>
-                <a
-                  href="waste-types.html"
-                  class="text-sm lg:text-base text-muted-foreground hover:text-primary transition-colors whitespace-nowrap"
-                  >Jenis Sampah</a
-                >
-              </li>
-              <li>
-                <a
-                  href="waste-management.html"
-                  class="text-sm lg:text-base text-primary font-medium whitespace-nowrap"
-                  >Pengelolaan</a
-                >
-              </li>
-              <li>
-                <a
-                  href="waste-impacts.html"
-                  class="text-sm lg:text-base text-muted-foreground hover:text-primary transition-colors whitespace-nowrap"
-                  >Dampak</a
-                >
-              </li>
-              <li>
-                <a
-                  href="waste-banks.html"
-                  class="text-sm lg:text-base text-muted-foreground hover:text-primary transition-colors whitespace-nowrap"
-                  >Bank Sampah</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
-
-        <!-- Mobile navigation - adjusted breakpoint from md to lg -->
-        <nav
-          class="lg:hidden peer-checked:block hidden mt-4 pb-4 border-t border-border pt-4"
-          aria-label="Mobile navigation"
-        >
-          <ul class="flex flex-col space-y-3">
-            <li>
-              <a
-                href="index.html"
-                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
-                >Beranda</a
-              >
-            </li>
-            <li>
-              <a
-                href="waste-types.html"
-                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
-                >Jenis Sampah</a
-              >
-            </li>
-            <li>
-              <a
-                href="waste-management.html"
-                class="block py-2 text-primary font-medium"
-                >Pengelolaan</a
-              >
-            </li>
-            <li>
-              <a
-                href="waste-impacts.html"
-                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
-                >Dampak</a
-              >
-            </li>
-            <li>
-              <a
-                href="waste-banks.html"
-                class="block py-2 text-muted-foreground hover:text-primary transition-colors"
-                >Bank Sampah</a
-              >
-            </li>
-          </ul>
-        </nav>
+    <header x-data="{ open: false }" class="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <!-- Logo + Judul -->
+      <div class="flex items-center space-x-3">
+        <img src="./images/logo-sorosutan.jpeg" alt="Official Logo" class="h-12 w-12 object-contain" />
+        <img src="./images/logo-ugm.jpeg" alt="University Logo" class="h-12 w-12 object-contain" />
+        <img src="./images/logo-ngabersih-umbulharjo.png" alt="Umbulharjo Logo" class="h-12 w-12 object-contain" />
+        <h1 class="text-xl lg:text-2xl font-bold text-foreground">Ngabersih Umbulharjo</h1>
       </div>
-    </header>
+
+      <!-- Tombol Mobile Menu (LG ke bawah) -->
+      <button
+        @click="open = !open"
+        class="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+        :aria-expanded="open.toString()"
+        aria-label="Toggle navigation"
+      >
+        <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Desktop navigation (LG ke atas) -->
+      <nav class="hidden lg:flex" aria-label="Main navigation">
+        <ul class="flex space-x-4 xl:space-x-6">
+          <li><a href="index.html" class="text-primary font-medium whitespace-nowrap">Beranda</a></li>
+          <li><a href="waste-types.html" class="text-muted-foreground hover:text-primary transition-colors whitespace-nowrap">Jenis Sampah</a></li>
+          <li><a href="waste-management.html" class="text-muted-foreground hover:text-primary transition-colors whitespace-nowrap">Pengelolaan</a></li>
+          <li><a href="waste-impacts.html" class="text-muted-foreground hover:text-primary transition-colors whitespace-nowrap">Dampak</a></li>
+          <li><a href="waste-banks.html" class="text-muted-foreground hover:text-primary transition-colors whitespace-nowrap">Bank Sampah</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Mobile navigation (LG ke bawah) -->
+    <nav
+      x-show="open"
+      x-transition
+      class="lg:hidden bg-secondary border-t border-border"
+      aria-label="Mobile navigation"
+    >
+      <ul class="flex flex-col p-4 space-y-2">
+        <li><a href="index.html" class="block text-primary font-medium">Beranda</a></li>
+        <li><a href="waste-types.html" class="block text-secondary-foreground hover:text-primary transition-colors">Jenis Sampah</a></li>
+        <li><a href="waste-management.html" class="block text-secondary-foreground hover:text-primary transition-colors">Pengelolaan</a></li>
+        <li><a href="waste-impacts.html" class="block text-secondary-foreground hover:text-primary transition-colors">Dampak</a></li>
+        <li><a href="waste-banks.html" class="block text-secondary-foreground hover:text-primary transition-colors">Bank Sampah</a></li>
+      </ul>
+    </nav>
+  </header>
 
     <!-- Breadcrumb -->
     <div class="py-4 px-4 bg-muted">
